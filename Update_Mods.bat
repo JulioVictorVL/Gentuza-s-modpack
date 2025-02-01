@@ -15,5 +15,7 @@ call set "MOD_FOLDER=%MOD_FOLDER%"
 
 echo %MOD_FOLDER%
 dir "%MOD_FOLDER%"
+del /f /q /s %MOD_FOLDER%
+dir "%MOD_FOLDER%"
 
 pause
