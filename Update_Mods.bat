@@ -10,14 +10,14 @@ echo %Git_exe%
 %Git_exe% pull
 
 
-set /p MOD_FOLDER=<"%Repository_Path%\Mod_folder_path.txt"
-call set "MOD_FOLDER=%MOD_FOLDER%"
+set /p MOD_FOLDER=<"%Repository_Path%Mod_folder_path.txt"
+call set MOD_FOLDER="%MOD_FOLDER%"
 
 echo %MOD_FOLDER%
-dir "%MOD_FOLDER%"
+dir %MOD_FOLDER%
 del /f /q /s %MOD_FOLDER%
-dir "%MOD_FOLDER%"
-xcopy "%Repository_Path%\mods" %MOD_FOLDER% /s /e /h
-dir "%MOD_FOLDER%"
+dir %MOD_FOLDER%
+xcopy "%Repository_Path%\mods\*" %MOD_FOLDER% /s /e /h
+dir %MOD_FOLDER%
 
 pause
